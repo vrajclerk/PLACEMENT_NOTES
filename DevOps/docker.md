@@ -37,7 +37,7 @@ Automate the building, testing, and deployment of applications within containers
   
 <br>
 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 <br>
 
@@ -131,7 +131,7 @@ It handles the persistence of data using volumes, so you can easily store and sh
 
 <br>
 
- ![alt text](image-4.png)
+ ![alt text](images/image-4.png)
 
  <br>
 
@@ -192,7 +192,7 @@ It handles the persistence of data using volumes, so you can easily store and sh
 
 <br>
 
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 ###     Dockerfile
 ```
