@@ -109,5 +109,97 @@ In DevOps, S3 is used for:
 
 - `Scalability`: Easily manage permissions as the team and infrastructure grow, ensuring consistent access controls across environments.
 
+<br>
+
+# IMP
+
+# 15. Describe how you would implement a CI/CD pipeline on AWS for a web application.
+- Implementing a CI/CD pipeline on AWS for a web application can be achieved using the following steps:
+
+## Source Stage:
+- `AWS CodeCommit or GitHub`: Host the application's source code in a repository.
+
+## Build Stage:
+
+- `AWS CodeBuild`: Automatically trigger a build when code is committed. CodeBuild compiles the code, runs unit tests, and creates build artifacts.
+Test Stage:
+
+- `AWS CodeBuild or AWS Device Farm`: Execute automated integration and functional tests to ensure code quality and application functionality.
+
+
+## Deploy Stage:
+
+`AWS CodeDeploy`: Deploy the application to target environments such as Amazon EC2 instances, AWS Lambda, or on-premises servers.
+`AWS Elastic Beanstalk or Amazon ECS`: Alternatively, use Elastic Beanstalk for easy deployment of web applications or Amazon ECS for containerized applications.
+
+## Approval Stage (Optional):
+
+`Manual Approval`: Incorporate a manual approval step before deploying to production to ensure quality control.
+Monitoring and Feedback:
+
+`Amazon CloudWatch and AWS X-Ray`: Monitor the application's performance and gather metrics.
+`Notifications`: Use Amazon SNS to send notifications about pipeline status and deployment results.
+
+## Infrastructure as Code:
+
+`AWS CloudFormation or AWS CDK`: Manage infrastructure provisioning and updates through code to ensure consistency and repeatability.
+
+<br>
+
+## 16. What is Amazon ECS and how does it compare to AWS Lambda?
+- Amazon ECS (Elastic Container Service) is a fully managed container orchestration service that allows you to run, manage, and scale Docker containers on AWS. It supports both EC2 and Fargate launch types, enabling you to run containers on managed infrastructure or serverless compute.
+
+Comparison to AWS Lambda:
+
+### `Use Cases`
+ECS: Suitable for running long-lived, scalable containerized applications, microservices, and batch processing.
+Lambda: Ideal for event-driven, short-lived, and serverless functions that execute in response to specific triggers.
+
+### `Infrastructure Management:`
+
+ECS: Requires managing container instances (if using EC2) or abstracts it with Fargate.
+Lambda: Completely serverless; AWS manages all infrastructure, scaling, and execution.
+
+### `Scalability:`
+
+ECS: Scales based on the number of containers and resources allocated.
+Lambda: Automatically scales in response to the number of incoming events or requests.
+
+### `Pricing:`
+
+ECS: Pay for the underlying compute resources (EC2 instances or Fargate usage).
+Lambda: Pay per invocation and execution time, making it cost-effective for sporadic workloads.
+
+Both services are integral to modern application architectures, and the choice between them depends on the specific requirements of the application.
+
+<br>
+
+## 17. What is Amazon EKS and how does it support DevOps?
+- Amazon EKS (Elastic Kubernetes Service) is a fully managed service that makes it easy to run Kubernetes clusters on AWS without needing to install and operate your own Kubernetes control plane.
+
+Support for DevOps:
+
+- `Container Orchestration`: Simplifies the deployment, management, and scaling of containerized applications using Kubernetes.
+- `Integration with AWS Services`: Seamlessly integrates with AWS services like IAM, VPC, and CloudWatch, enhancing security and observability.
+- `Automation`: Facilitates automated deployments, scaling, and updates through Kubernetes-native tools and CI/CD pipelines.
+- `Consistency`: Provides a consistent environment for development, testing, and production, improving collaboration between Dev and Ops teams.
+- `Scalability and Reliability`: Leverages AWS’s infrastructure to ensure high availability and scalability of Kubernetes clusters.
+  
+By using Amazon EKS, DevOps teams can leverage Kubernetes’ powerful features while benefiting from AWS’s managed infrastructure, enabling efficient and scalable application deployments.
+
+## 18. What is Amazon Route 53 and how is it used in DevOps?
+Sample Answer: Amazon Route 53 is a scalable and highly available Domain Name System (DNS) web service. It translates human-readable domain names into IP addresses and routes internet traffic to appropriate resources.
+
+<br>
+
+an artifact in software development is any file or piece of output that is produced as part of the building, testing, or deploying of software. It can include things like:
+
+Compiled code (e.g., .jar or .exe files)
+Configuration files
+Documentation
+Logs
+Docker images
+Static assets (e.g., HTML, CSS, and JavaScript files for a web app)
+
 
 
