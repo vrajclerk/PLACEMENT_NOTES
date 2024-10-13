@@ -66,3 +66,8 @@
 - A Service is a method for exposing a network application that is running as one or more Pods in your cluster.
 
 - A key aim of Services in Kubernetes is that you don't need to modify your existing application to use an unfamiliar service discovery mechanism. You can run code in Pods, whether this is a code designed for a cloud-native world, or an older app you've containerized. You use a Service to make that set of Pods available on the network so that clients can interact with it. 
+
+
+## Deamon:
+- A DaemonSet is a Kubernetes object that ensures a copy of a Pod is running on every node
+- You can use DaemonSets for tasks like: Monitoring nodes, Collecting logs, Running a network proxy, and Backing up node data.
