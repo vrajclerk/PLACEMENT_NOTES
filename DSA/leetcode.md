@@ -196,3 +196,98 @@ int lengthOfLongestSubstring(string s) {
         return maxLength;
     }
 ```
+
+<br>
+
+# 7. Reverse LinkedList
+```java
+public ListNode reverseList(ListNode head) {
+    ListNode prev = null; // Initialize the previous node to null
+    ListNode next = null; // Initialize the next node to null
+    ListNode curr = head; // Start with the head of the list as the current node
+
+    // Iterate through the list until we reach the end
+    while (curr != null) {
+        next = curr.next; // Store the next node
+        curr.next = prev; // Reverse the current node's pointer to the previous node
+        prev = curr; // Move the previous node to the current node
+        curr = next; // Move to the next node in the list
+    }
+    return prev; // The previous node will be the new head of the reversed list
+}
+```
+<br>
+
+# 8. Merge two sorted list
+
+```java
+public class ListNode {
+    int val;
+    ListNode next;
+    
+    ListNode() {}
+    ListNode(int val) { this.val = val; }
+    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+}
+
+public class Solution {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        // Create a dummy node to act as the start of the merged list
+        ListNode dummy = new ListNode(-1);
+        // Tail points to the last node in the merged list (starts with dummy)
+        ListNode tail = dummy;
+
+        // Traverse both lists
+        while (list1 != null && list2 != null) {
+            if (list1.val <= list2.val) {
+                // Add list1's node to the merged list if it's smaller or equal
+                tail.next = list1;
+                list1 = list1.next;  // Move list1 pointer forward
+            } else {
+                // Add list2's node to the merged list if it's smaller
+                tail.next = list2;
+                list2 = list2.next;  // Move list2 pointer forward
+            }
+            tail = tail.next;  // Move tail to the last node in the merged list
+        }
+
+        // If one of the lists is not empty, link the remaining part to the merged list
+        if (list1 != null) {
+            tail.next = list1;
+        } else {
+            tail.next = list2;
+        }
+
+        // Return the merged list, starting from the next node of the dummy (skipping -1)
+        return dummy.next;
+    }
+}
+```
+
+<br>
+
+# 9. Valid parantheses
+
+```java
+class Solution {
+    public boolean isValid(String s) {
+        Stack<Character> stack = new Stack<Character>(); // create an empty stack
+        for (char c : s.toCharArray()) { // loop through each character in the string
+            if (c == '(') // if the character is an opening parenthesis
+                stack.push(')'); // push the corresponding closing parenthesis onto the stack
+            else if (c == '{') // if the character is an opening brace
+                stack.push('}'); // push the corresponding closing brace onto the stack
+            else if (c == '[') // if the character is an opening bracket
+                stack.push(']'); // push the corresponding closing bracket onto the stack
+            else if (stack.isEmpty() || stack.pop() != c) // if the character is a closing bracket
+                // if the stack is empty (i.e., there is no matching opening bracket) or the top of the stack
+                // does not match the closing bracket, the string is not valid, so return false
+                return false;
+        }
+        // if the stack is empty, all opening brackets have been matched with their corresponding closing brackets,
+        // so the string is valid, otherwise, there are unmatched opening brackets, so return false
+        return stack.isEmpty();
+    }
+}
+```
+
