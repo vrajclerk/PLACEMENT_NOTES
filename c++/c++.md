@@ -232,3 +232,42 @@ A virtual function is a member function which is present in the base class and r
 - created and instantiated once for the lifetime of the program
 
 - static variables in class are created and instatiated once.they are shared by all the objects in class
+
+<br>
+
+## Friend Function:
+- protected and private data members of a class can be accessed using this function.
+-  can be defined inside the class or outside the class.
+-  
+```cpp
+#include <iostream>    
+using namespace std;    
+class Box    
+{    
+    private:    
+        int length;    
+    public:    
+        Box(): length(0) { }    
+        friend int printLength(Box); //friend function    
+};    
+int printLength(Box b)    
+{    
+   b.length += 10;    
+    return b.length;    
+}    
+int main()    
+{    
+    Box b;    
+    cout<<"Length of box: "<< printLength(b)<<endl;    
+    return 0;    
+}    
+```
+
+<br>
+
+## Pointers
+- pointers are variables that stores the address of other variables.
+
+![alt text](image-6.png)
+
+![alt text](image-7.png)
