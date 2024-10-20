@@ -3,6 +3,8 @@
 ## Objects:
 - Objects are entities in the real world
 
+![alt text](Notes_241020_112942-1.jpg)
+
 ## Classes
 - Class is like a blueprint of these entities
 - work of the blueprint is to display how this object will appear.
@@ -198,14 +200,14 @@ int main() {
 Function overriding:
 - allows a derived class to provide a specific implementation of a function that is already available in its base.
 
-- parent and chile both contain same function but different implementation.
+- parent and child both contain same function but different implementation.
 
 - parent class is called overriden
 
 - child class is called overriding
 
 ### Virtual functions:
-A virtual function is a member function which is present in thebase class and redefined by the derived class.
+A virtual function is a member function which is present in the base class and redefined by the derived class.
 
 `Characteristics:`
 - It is declared using the keyword virtual inside a base class and are always declared inside a base class and overridden in child class.
@@ -215,3 +217,18 @@ A virtual function is a member function which is present in thebase class and re
 ## Abstaction:
 - Abstraction is the concept of showing only necessary information to the outside world while hiding the internal details.
 - to implement we use access modifiers/specifiers
+
+### using abstract class:
+- doesn't create any objects
+- used to provide a base class from which other class can be derived
+- used to define interface for derived class
+
+![alt text](Notes_241020_112942.jpg)
+
+<br>
+
+## static keyword:
+- Static keyword is used to create a static variable or method.
+- created and instantiated once for the lifetime of the program
+
+- static variables in class are created and instatiated once.they are shared by all the objects in class
