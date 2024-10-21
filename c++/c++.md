@@ -1,7 +1,8 @@
 # C++
 
 ## Objects:
-- Objects are entities in the real world
+- Objects are entities in the real world.
+- Object is an instance of a class.
 
 ![alt text](Notes_241020_112942-1.jpg)
 
@@ -60,6 +61,10 @@ Instead of creating lots of variables in code, OOPS concepts says: create a clas
  - It is a special pointer that points to current object.
  - Using this we can know that this the object's property.
 
+- There can be 3 main uses of ‘this’ keyword:
+   1. It can be used to pass the current object as a parameter to another method
+   2. It can be used to refer to the current class instance variable.
+   3. It can be used to declare indexers.
 
 ![alt text](image-3.png)
 
@@ -148,7 +153,7 @@ int main() {
 
 ## Destructor:
 - A destructor works opposite to constructor;it destructs the
- objects ofclasses. It can be definedonly onceina class. Like constructors, it is invokedautomatically. 
+ objects of classes. It can be defined only once in a class. Like constructors, it is invoked automatically. 
 
  - A destructor is definedlike a constructor. It must
  have the same name asclass, prefixed with atildesign (~)
@@ -271,3 +276,6 @@ int main()
 ![alt text](image-6.png)
 
 ![alt text](image-7.png)
+
+
+![alt text](image-8.png)
