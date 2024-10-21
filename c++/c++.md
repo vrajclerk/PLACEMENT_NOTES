@@ -155,8 +155,8 @@ int main() {
 - A destructor works opposite to constructor;it destructs the
  objects of classes. It can be defined only once in a class. Like constructors, it is invoked automatically. 
 
- - A destructor is definedlike a constructor. It must
- have the same name asclass, prefixed with atildesign (~)
+ - A destructor is defined like a constructor. It must
+ have the same name as class, prefixed with atildesign (~)
 
  <br>
 
@@ -279,3 +279,8 @@ int main()
 
 
 ![alt text](image-8.png)
+
+
+## Operator Overloading:
+
+Operator overloading in C++ is a feature that allows you to redefine or "overload" standard operators (such as +, -, *, ==, etc.) to work with user-defined data types (like classes and structures). This enables operators to perform custom operations when applied to objects of those types, making code more intuitive and easier to read.
